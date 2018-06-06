@@ -1,6 +1,5 @@
 (function (){
     var curPlayer = 'player1';
-    console.log($('.column').length);
 
     function switchPlayers() {
 
@@ -98,9 +97,9 @@
 
 
     $('.column').on('click', function (e) {
-        console.log('click!');
+
         var slotsInColumn = $(e.currentTarget).find('.slot');
-        console.log(slotsInColumn.length);
+
         for (var i = 5; i >= 0; i--) {
             if (!slotsInColumn.eq(i).hasClass('player1') && !slotsInColumn.eq(i).hasClass('player2')){
                 slotsInColumn.eq(i).addClass(curPlayer);
@@ -109,18 +108,18 @@
         }
 
         if (checkForVictory(slotsInColumn)) {
-            console.log('COLUMN YAY');
+
             victoryMessage();
         } else {
 
             var slotsInRow = $('.row' + i);
             if (checkForVictory(slotsInRow)) {
-                console.log('ROW YAY');
+
                 victoryMessage();
 
             } else {
                 if (checkSlotDiag($(e.currentTarget), i)) {
-                    console.log('DIAGONAL YAY');
+                    
                     victoryMessage();
                 }
 
