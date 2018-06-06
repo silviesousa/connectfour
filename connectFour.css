@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.slot {
+    width:100px;
+    height: 100px;
+    background-color: rgb(204, 241, 247);
+    padding: 10px;
+}
+
+.slot div {
+    width: 80px;
+    height: 80px;
+    background-color: white;
+    border-radius: 40px;
+}
+
+.slot.player1 div {
+    background-color: #6d10aa;
+}
+
+.slot.player2 div {
+    background-color: rgb(255, 215, 6);
+}
+
+.column {
+    display: inline-block;
+}
+
+.chip {
+    width: 55px;
+    height: 55px;
+    position: absolute;
+}
+
+.chip.player1 {
+    background-color: #6d10aa;
+}
+
+.chip.player2 {
+    background-color: rgb(255, 215, 6);
+}
